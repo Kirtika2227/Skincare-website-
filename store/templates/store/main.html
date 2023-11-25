@@ -1,0 +1,206 @@
+<!DOCTYPE html>
+
+{% load static %}
+<html>
+<head>
+	<style>
+		/* Reduce spacing between sections */
+.about-section, .products-section, .skincare-section {
+    margin-bottom: 20px; /* Adjust as needed */
+}
+
+/* Reduce spacing within the product items */
+.product-item {
+    margin-bottom: 10px; /* Adjust as needed */
+}
+
+/* Reduce spacing within the footer */
+.footer {
+    padding: 20px 0; /* Adjust as needed */
+}
+
+/* Reduce spacing within the footer contact and social icons */
+.footer .col-md-8, .footer .col-md-6 {
+    padding: 0 10px; /* Adjust as needed */
+}
+
+/* Reduce spacing between social icons */
+.social-icon {
+    margin-right: 10px; /* Adjust as needed */
+}
+
+	</style>
+	<title>GLOW&GLAM</title>
+
+	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, minimum-scale=1" />
+
+	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+
+	<link rel="stylesheet" type="text/css" href="{% static 'css/main.css' %}">
+
+	<script type="text/javascript">
+		var user = '{{request.user}}'
+
+		function getToken(name) {
+		    var cookieValue = null;
+		    if (document.cookie && document.cookie !== '') {
+		        var cookies = document.cookie.split(';');
+		        for (var i = 0; i < cookies.length; i++) {
+		            var cookie = cookies[i].trim();
+		            // Does this cookie string begin with the name we want?
+		            if (cookie.substring(0, name.length + 1) === (name + '=')) {
+		                cookieValue = decodeURIComponent(cookie.substring(name.length + 1));
+		                break;
+		            }
+		        }
+		    }
+		    return cookieValue;
+		}
+		var csrftoken = getToken('csrftoken')
+	
+	</script>
+
+</head>
+<body>
+
+	<nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+	  <a class="navbar-brand" href="{% url 'main' %}">GLOW&GLAM</a>
+	  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+	    <span class="navbar-toggler-icon"></span>
+	  </button>
+
+	  <div class="collapse navbar-collapse" id="navbarSupportedContent">
+	    <ul class="navbar-nav mr-auto">
+	      <li class="nav-item active">
+	        <a class="nav-link" href="{% url 'store' %}">Store <span class="sr-only">(current)</span></a>
+	      </li>
+	 
+	    </ul>
+	    <div class="form-inline my-2 my-lg-0">
+	     	<a href="{%url 'login'%}"class="btn btn-warning" > Login</a>
+	     	
+	     	<a href="{% url 'cart' %}">
+	    		<img  id="cart-icon" src="{% static 'images/cart.png' %}">
+	    	</a>
+	    	<p id="cart-total">{{cartItems}}</p>
+
+	    </div>
+	  </div>
+	</nav>
+
+     <div class="container">
+            <br>
+			{% block content %}
+			<img src="{% static 'images/heroimage.png' %}" alt="Image Description" style=" margin: 0 ; width: 100%; height: 130%;">
+
+			<main style="display: flex; justify-content: center; align-items: center; height: 80vh; text-align: center; ">
+				<!-- About Section -->
+				<section class="about-section" style="color:white">
+					<h1>Welcome to Our Website</h1>
+					<b><p>We are dedicated to providing the best skincare products and tips to enhance your beauty and skincare routine. Explore our collection of high-quality skincare products and achieve a radiant and healthy skin.</p>
+					<p>Discover a wide range of skincare solutions tailored to your needs, whether it's moisturizers, cleansers, serums, or more.</p>
+					<p>Join our community and embark on a journey to better, healthier, and more vibrant skin.</p>
+				<b>
+				</section>
+			</main>
+			
+			
+<div class="container">
+    <div class="row">
+        <!-- Image Column -->
+        <div class="col-md-5">
+            <img src="{% static 'images/skincare-image.png' %}" alt="Skincare Image" class="img-fluid">
+        </div>
+        <!-- Text Column -->
+        <div class="col-md-6">
+            <h2>The Importance of Skincare</h2>
+            <p>
+                Skincare is an essential part of maintaining healthy and beautiful skin. Proper skincare can help you achieve a radiant complexion and prevent various skin issues. It involves cleansing, moisturizing, and protecting your skin from environmental factors.
+            </p>
+            <p>
+                Our skincare products are carefully crafted to provide the best care for your skin. Explore our collection to discover the right products for your skincare routine.
+            </p>
+        </div>
+    </div>
+</div>
+<br>
+<br>
+<br>
+<br>
+
+
+
+<section class="products-section,">
+	<h2>Our Products</h2>
+	<div class="row">
+		<div class="col-md-3">
+			<div class="product-item">
+				<img src="{% static 'images/suncreen.jpg' %}" alt="Sunscreen">
+				<h3>Sunscreen</h3>
+				<p>Protect your skin from harmful UV rays with our sunscreen.</p>
+			</div>
+		</div>
+		<div class="col-md-3">
+			<div class="product-item">
+				<img src="{% static 'images/moistureizer.jpg' %}" alt="Moisturizer">
+				<h3>Moisturizer</h3>
+				<p>Keep your skin hydrated and smooth with our moisturizer.</p>
+			</div>
+		</div>
+		<div class="col-md-3">
+			<div class="product-item">
+				<img src="{% static 'images/lipbam.jpg' %}" alt="Lip Balm">
+				<h3>Lip Balm</h3>
+				<p>Protect and moisturize your lips with our lip balm.</p>
+			</div>
+		</div>
+		<div class="col-md-3">
+			<div class="product-item">
+				<img src="{% static 'images/toner.jpg' %}" alt="Moisturizer">
+				<h3>Toner</h3>
+				<p>Keep your skin hydrated and smooth with our Toner.</p>
+			</div>
+		</div>
+</section>
+<br>
+<br>
+<br>
+<br>
+
+			
+			<br>
+			<br>
+			<br>
+		
+			<footer class="footer">
+				<div class="container">
+					<div class="row">
+						<div class="col-md-8">
+							<h3>Contact Us</h3>
+							<p>Email: glowandglam.com</p>
+							<p>Phone: (123) 456-7890</p>
+						</div>
+						<div class="col-md-6 text-md-right">
+							<h3>Follow Us</h3>
+							<div class="social-icons">
+								<a href="#" class="social-icon"><i class="fab fa-facebook"></i></a>
+								<a href="#" class="social-icon"><i class="fab fa-twitter"></i></a>
+								<a href="#" class="social-icon"><i class="fab fa-instagram"></i></a>
+							</div>
+						</div>
+					</div>
+				</div>
+			</footer>
+		{% endblock content %}
+         </div>
+
+
+	<script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
+
+	<script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+
+	<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
+
+	<script type="text/javascript" src="{% static 'js/cart.js' %}"></script>
+</body>
+</html>

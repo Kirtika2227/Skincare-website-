@@ -1,0 +1,170 @@
+body{
+	background-color: #dca6a9;
+		font-family: 'Montserrat';
+	
+}
+
+h1,h2,h3,h4,h5,h6,p{
+	color:hsl(0, 45%, 94%);
+}
+
+.box-element{
+	box-shadow:hsl(0, 43%, 71%) 0 0 16px;
+	background-color:#ec9b9f ;
+	border-radius: 4px;
+	padding: 10px;
+}
+
+.thumbnail{
+	width: 100%;
+	height: 200px;
+	-webkit-box-shadow: -1px -3px 5px -2px rgba(214,214,214,1);
+    -moz-box-shadow: -1px -3px 5px -2px rgba(214,214,214,1);
+    box-shadow: -1px -3px 5px -2px rgba(214,214,214,1);
+}
+
+.product{
+	border-radius: 0 0 4px 4px;
+}
+
+.bg-dark{
+	background-color: #ec9b9f!important;
+}
+
+#cart-icon{
+	width:25px;
+	display: inline-block;
+	margin-left: 15px;
+}
+
+#cart-total{
+	display: block;
+	text-align: center;
+	color:#fff;
+	background-color: red;
+	width: 20px;
+	height: 25px;
+	border-radius: 50%;
+	font-size: 14px;
+}
+
+.col-lg-4, .col-lg-6, .col-lg-8, .col-lg-12{
+	margin-top: 10px;
+}
+
+.btn{
+	border-radius: 0;
+}
+
+.row-image{
+	width: 100px;
+}
+
+.form-field{
+	width:250px;
+	display: inline-block;
+	padding: 5px;
+}
+
+.cart-row{
+	display: flex;
+    align-items: flex-stretch;
+    padding-bottom: 10px;
+    margin-bottom: 10px;
+    border-bottom: 1px solid #ececec;
+
+}
+
+.quantity{
+	display: inline-block;
+	font-weight: 700;
+	padding-right:10px;
+	
+
+}
+
+.chg-quantity{
+	width: 12px;
+	cursor: pointer;
+	display: block;
+	margin-top: 5px;
+	transition:.1s;
+}
+
+.chg-quantity:hover{
+	opacity: .6;
+}
+
+
+.hidden{
+	display: none!important;
+}
+
+/* Style for the Products Section */
+.products-section {
+    background-color:#dca6a9;
+    padding: 30px;
+}
+
+.product-item {
+    text-align: center;
+    padding: 20px;
+	max-width: 100%;
+    height: 80%;
+}
+
+.product-item img {
+    max-width: 100%;
+    height: 80%;
+}
+
+/* Add more CSS styles as needed */
+.footer {
+    background-color: #333;
+    color: white;
+    padding: 40px 0;
+    width: 100%; /* Set the width to 100% to span the full width */
+}
+
+.footer h3 {
+    font-size: 1.5rem;
+    margin-bottom: 0px;
+}
+
+.footer p {
+    font-size: 14px;
+    margin-bottom: 0px;
+}
+
+.social-icons {
+    margin-top: 10px;
+}
+
+.social-icon {
+    font-size: 24px;
+    color: white;
+    margin-right: 15px;
+    transition: color 0.3s ease-in-out;
+}
+
+.social-icon:hover {
+    color: #d2b48c; /* Light brown color on hover */
+}
+
+    .carousel-text {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        height: 100%;
+    }
+
+    .carousel-text h3 {
+        margin-bottom: 10px;
+        font-size: 24px;
+        font-weight: bold;
+    }
+
+    .carousel-text p {
+        font-size: 16px;
+    }
