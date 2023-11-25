@@ -3,7 +3,8 @@ Users can buy items Add them to the cart view summary of the Cart
 Admin can Add new products and manage website and user data
 
 THIS IS THE FRONT END AND ALL THE FEATURES OF THE WEBSITE :
-![Screenshot (42)![Screenshot (44)](https://github.com/Kirtika2227/Skincare-website-/assets/136061745/6a77212d-d3c3-48bc-a122-c2b7219ed512)
+![Screenshot (42)](https://github.com/Kirtika2227/Skincare-website-/assets/136061745/70b29440-fd91-41f3-9c0a-4f2a31d1e559)
+
 ![Screenshot (43)](https://github.com/Kirtika2227/Skincare-website-/assets/136061745/24d9bd18-5ea9-47bd-8d5b-070bf62fcc66)
 
 ![Screenshot (44)](https://github.com/Kirtika2227/Skincare-website-/assets/136061745/3da9f4a0-2db8-4169-b910-88c6fd82453d)
